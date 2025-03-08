@@ -1,0 +1,42 @@
+body{
+    background-color: #e6ddd6;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.square{
+    height: 100px;
+    width: 50px;
+    background-color: black;
+}
+
+.navbar{
+    background-color: #a37cf0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom:px;
+    width: 100%;
+}
+
+.navbar p{
+    
+}
+
+.navbar a
+{
+    float: left;
+    color: white;
+    padding: 10px 10px;
+}
+
+.navbar a:hover
+{
+    background-color: #e6ddd6;
+    color: white;
+}
+
+
+
+
+
+
