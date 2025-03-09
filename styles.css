@@ -1,38 +1,104 @@
 body{
     background-color: #e6ddd6;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: garamond;
+    font-size: 18px;
+    margin-top: 50px;
 }
 
-.square{
-    height: 100px;
-    width: 50px;
-    background-color: black;
+/* formatting for image at top of page */
+.image{
+    display: block;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 85px;
+    margin-bottom: 25px;
+    box-shadow: 10px 10px 30px 5px  black;  
 }
 
+/* bar containing socials and contact */
 .navbar{
     background-color: #a37cf0;
     position: fixed;
-    top: 0;
+    top: -50px;
     left: 0;
-    bottom:px;
     width: 100%;
+    height: 50px;
+    z-index: 100;
+    animation: slideDown 0.75s forwards;
+}
+
+@keyframes slideDown {
+    from {
+        top: -50px;
+    }
+    to {
+        top: 0;
+    }
 }
 
 .navbar p{
-    
+    padding-top: 12px;
+    padding-right: 10px;
+    float: right;
+    color: black;
 }
 
-.navbar a
-{
+.navbar a{
     float: left;
     color: white;
     padding: 10px 10px;
 }
 
-.navbar a:hover
-{
+.navbar a:hover{
     background-color: #e6ddd6;
     color: white;
+}
+
+/* styling for about me section */
+.aboutme{
+    font-family: garamond;
+    font-size: 15px;
+    text-align: center;
+    margin-top: px;
+}
+
+/* Animation for sections */
+.slideout {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.75s ease-out, transform 0.75s ease-out;
+}
+
+.slideout.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* scroll more feature */
+.scroll-more {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #a37cf0;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.75s disapear;
+}
+
+.scroll-more.visible {
+    opacity: 0.5;
+    font-size: 10px;
+    text-align: center;
+}
+
+.scroll-more::after {
+    padding-left: 5px;
+    content: '↓';
+    font-size: 10px;
 }
 
 
