@@ -17,7 +17,9 @@
             <a href = "https://www.linkedin.com/in/andrew-eby" target="_blank">
                 <img src="LinkedIn_logo_initials-removebg-preview-removebg-preview.png" alt="LinkedIn" width="30" height="30">
             </a>
-            <p>Andrew Eby | ebyandy1@hotmail.com</p>
+            <p>
+                Andrew Eby | ebyandy1@hotmail.com
+            </p>
         </div>
 
         <section id="picture">
@@ -26,83 +28,16 @@
 
         <section id="about-me" class="aboutme">
             <h2>About Me</h2>
-            <p style="margin-top: -10px;">I'm a junior at Indiana University, majoring in computer science with a focus on artificial 
-            intelligence and a minor in informatics. I have strong programming skills in Python, and C, and I 
-            enjoy applying these skills in creative ways. My passion for innovative problem-solving drives me
-            toward a career in machine learning, where I can combine technical expertise and creativity to make 
-            a real-world impact.</p>
-        </section>
-
-        <section id="projects", class="slideout">
-            <h2>Projects</h2>
-            <p>Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
-                Details about my projects will go here.
+            <p>
+                I'm a junior at Indiana University, pursing a B.S. in computer science with a focus 
+                on artificial intelligence and a minor in informatics. I have strong programming skills
+                in Python and C, along with experience in SQL, HTML/CSS, Arduino, Fusion360 (CAD), and Unity. 
+                My passion for innovative problem-solving drives me toward a career in machine learning and AI, 
+                where I can combine technical expertise and creativity to make a real-world impact.
             </p>
         </section>
+        <script type="text/javascript" src="scripts.js"></script>
 
-        <section id="resume" class="slideout">
-            <h2>Resume</h2>
-            <p>You can download my resume <a href="resume.pdf" target="_blank">here</a>.</p>
-        </section>
 
-        <details>
-            <summary> Credits </summary>
-            <p> Layout by <a href = "http://getskeleton.com"> Skeleton </a> </p>
-        </details>
-
-        <div class="scroll-more">Scroll for more information</div>
-
-        <script>
-            document.addEventListener('scroll', function() {
-                const sections = document.querySelectorAll('section');
-                const triggerBottom = window.innerHeight / 5 * 4;
-
-                sections.forEach(section => {
-                    const sectionTop = section.getBoundingClientRect().top;
-
-                    if (sectionTop < triggerBottom) {
-                        section.classList.add('visible');
-                    } else {
-                        section.classList.remove('visible');
-                    }
-                });
-
-                const scrollMore = document.querySelector('.scroll-more');
-                if (window.scrollY == 0) {
-                    scrollMore.classList.add('visible');
-                } else {
-                    scrollMore.classList.remove('visible');
-                }
-            });
-        </script>
     </body>
 </html>
