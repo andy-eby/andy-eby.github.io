@@ -1,3 +1,4 @@
+/* general formatting for all pages */
 body{
     background-color: #e6ddd6;
     font-family: garamond;
@@ -28,6 +29,7 @@ body{
     animation: slideDown 0.75s forwards;
 }
 
+/* animation for navbar to slide down when page is loaded */
 @keyframes slideDown {
     from {
         top: -50px;
@@ -58,7 +60,7 @@ body{
 /* styling for about me section */
 .aboutme{
     font-family: garamond;
-    font-size: 24px;
+    font-size: 22px;
     text-align: center;
     margin-left: 50px;
     margin-right: 50px; 
@@ -82,21 +84,10 @@ body{
     margin-bottom: 15px;
 }
 
+/* styling for button/link to project's repository */
 .repository_button{
     background-color: #a37cf0;
     border-radius: 10px;
-}
-
-/* Animation for sections */
-.slideout {
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: opacity 0.75s ease-out, transform 0.75s ease-out;
-}
-
-.slideout.visible {
-    opacity: 1;
-    transform: translateX(0);
 }
 
 
