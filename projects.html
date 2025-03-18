@@ -5,23 +5,57 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
         <link rel="stylesheet" href="styles.css">
+        <script type="text/javascript" src="scripts.js"></script>
+
         <title>Projects</title>
     </head>
 
     <body>
         <div class="navbar">
-            <a href = "https://github.com/andy-eby" target="_blank">
-                <img src="GitHub_Logo-removebg-preview.png" alt="GitHub" width="30" height="30">
+            <a href="https://github.com/andy-eby" target="_blank">
+                <img src="Images/GitHub_Logo.png" title="GitHub" alt="GitHub" width="30" height="30">
             </a>
     
-            <a href = "https://www.linkedin.com/in/andrew-eby" target="_blank">
-                <img src="LinkedIn_logo_initials-removebg-preview-removebg-preview.png" alt="LinkedIn" width="30" height="30">
+            <a href="https://www.linkedin.com/in/andrew-eby" target="_blank">
+                <img src="Images/LinkedIn_logo.png" title="LinkedIn" alt="LinkedIn" width="30" height="30">
             </a>
+
+            <a href="projects.html" target="_self">
+                <img src="Images/projects_icon.png" title="Projects" alt="Projects" width="30" height="30">   
+            </a>
+
+            <a href="resume.html" target="_self">
+                <img src="Images\resume_icon.png" title="Resume" alt="Resume" width="30" height="30">   
+            </a>
+
             <p>
                 Andrew Eby | ebyandy1@hotmail.com
             </p>
         </div>
+        
+        <section id="projects" class="projects">
+            <h1>Projects</h1>
+            <h4>An NFL Trade Outcome Prediction Model</h4>
+            <h6>CSCI-365 Fall 2024</h6>
+            <h6>Colleague: Chris Haleas</h6>
+            <a href="https://github.com/andy-eby/NFL-trade-outcome-predictor" target="_blank">
+                <button class="repository_button">Repository Link</button>
+            </a>
+            <ul>
+                <li>Developed an NFL Trade Outcome Prediction Model to assess how player performance changes after a trade (Offensive players only).</li>
+                <li>Processed a Kaggle dataset (2012-2023) by removing outliers, selecting key features, and applying min-max normalization.</li>
+                <li>Developed Player Performance Score (PPS) and Team Position Score (TPS) to quantify player and team trade value.</li>
+                <li>Trained a Linear Regression model to predict player performance post-trade based on historical data.</li>
+                <li>Created heatmap visualizations to identify team strengths and weaknesses for better trade decisions.</li>
+                <li>Evaluated model accuracy using R², RMSE, and MAE to ensure reliable trade predictions.</li>
+            </ul>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/WOEZEPdm62Y?si=qdN6moN1plTDl1S-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
 
+        <section id="fashion_recomend_project" class="projects">
+
+        </section>
+        
 
     </body>
 

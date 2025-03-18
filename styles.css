@@ -64,12 +64,27 @@ body{
     margin-right: 50px; 
 }
 
+/* styling for projects section */
 .projects{
     font-family: garamond;
-    font-size: 24px;
+    font-size: 18px;
     text-align: center;
     margin-left: 50px;
     margin-right: 50px; 
+    margin-top: 70px;
+}
+
+.projects h6{
+    text-align: center;
+    font-size: 15px;
+    padding-top: 15px;
+    margin-top: -35px;
+    margin-bottom: 15px;
+}
+
+.repository_button{
+    background-color: #a37cf0;
+    border-radius: 10px;
 }
 
 /* Animation for sections */
