@@ -5,8 +5,8 @@ body{
     margin-top: 50px;
 }
 
-/* formatting for image at top of page */
-.image{
+/* formatting for image at top of index page */
+.personal_image{
     display: block;
     border-radius: 50%;
     margin-left: auto;
@@ -16,7 +16,7 @@ body{
     box-shadow: 10px 10px 30px 5px  black;  
 }
 
-/* bar containing socials and contact */
+/* bar containing socials, projects, resume, and contact */
 .navbar{
     background-color: #a37cf0;
     position: fixed;
