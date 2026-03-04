@@ -1,93 +1,248 @@
 /* general formatting for all pages */
-body{
-    background-color: #e6ddd6;
-    font-family: garamond;
+body {
+    /* Animated Gradient Background */
+    background: linear-gradient(-45deg, #e6ddd6, #f4eaff, #e6ddd6, #dacbf3);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+
+    color: #333;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 18px;
-    margin-top: 50px;
+    line-height: 1.6;
+    margin: 0;
+    padding-top: 80px; /* Space for fixed navbar */
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* formatting for image at top of index page */
-.personal_image{
+.personal_image {
     display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* Fix squishing */
     border-radius: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 70px;
-    margin-bottom: 25px;
-    box-shadow: 10px 10px 30px 5px  black;  
+    margin: 40px auto 30px;
+    border: 4px solid #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* Softer, modern shadow */
+    transition: transform 0.3s ease;
+    animation: scaleIn 0.8s ease-out;
 }
 
-/* bar containing socials, projects, resume, and contact */
-.navbar{
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.personal_image:hover {
+    transform: scale(1.05);
+}
+
+/* Bar containing socials, projects, resume, and contact */
+.navbar {
     background-color: #a37cf0;
     position: fixed;
-    top: -50px;
+    top: 0; 
     left: 0;
     width: 100%;
-    height: 50px;
-    z-index: 100;
-    animation: slideDown 0.75s forwards;
+    height: 60px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    transform: translateY(-100%);
+    animation: slideDown 0.5s ease-out forwards;
 }
 
-/* animation for navbar to slide down when page is loaded */
 @keyframes slideDown {
-    from {
-        top: -50px;
-    }
-    to {
-        top: 0;
-    }
+    to { transform: translateY(0); }
 }
 
-.navbar p{
-    padding-top: 12px;
-    padding-right: 10px;
-    float: right;
-    color: black;
+.navbar-info {
+    color: #fff;
+    font-weight: 500;
 }
 
-.navbar a{
-    float: left;
-    color: white;
-    padding: 10px 10px;
+.navbar-info p {
+    margin: 0;
 }
 
-.navbar a:hover{
-    background-color: #e6ddd6;
-    color: white;
+.navbar-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.navbar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    transform: scale(1.1);
+    background-color: transparent;
 }
 
 /* styling for about me section */
-.aboutme{
-    font-family: garamond;
-    font-size: 22px;
+.aboutme {
+    max-width: 800px;
+    margin: 0 auto 40px;
     text-align: center;
-    margin-left: 50px;
-    margin-right: 50px; 
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    
+    /* Fade-in Animation */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease-out 0.3s forwards;
+}
+
+@keyframes fadeIn {
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.aboutme h2 {
+    color: #5e3c97;
+    margin-top: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.aboutme p {
+    text-align: left;
+    line-height: 1.8;
+    color: #444;
 }
 
 /* styling for projects section */
-.projects{
-    font-family: garamond;
-    font-size: 18px;
+.projects {
     text-align: center;
-    margin-left: 50px;
-    margin-right: 50px; 
-    margin-top: 70px;
+    margin: 40px auto;
+    max-width: 1000px;
+    font-family: inherit;
+    /* Fade-in Animation */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease-out 0.6s forwards; /* Delay slightly more */
 }
 
-.projects h6{
+/* Credits / Footer */
+details {
+    max-width: 800px;
+    margin: 0 auto 50px;
     text-align: center;
-    font-size: 15px;
-    padding-top: 15px;
-    margin-top: -35px;
-    margin-bottom: 15px;
+    color: #666;
+    font-size: 0.9em;
+    cursor: pointer;
 }
 
-/* styling for button/link to project's repository */
-.repository_button{
+.projects h1 {
+    color: #5e3c97;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* Individual Project Card Styling */
+.project-card {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.12);
+}
+
+.project-card h4 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.project-card h6 {
+    color: #666;
+    font-size: 0.9em;
+    font-weight: 400;
+    margin: 5px 0;
+    font-style: italic;
+}
+
+.project-card ul {
+    text-align: left;
+    margin: 20px auto;
+    max-width: 800px;
+    padding-left: 20px;
+}
+
+.project-card li {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+/* Styling for button/link to project's repository */
+.repository_button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background-color: #a37cf0;
-    border-radius: 10px;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 15px 0;
+    box-shadow: 0 4px 6px rgba(163, 124, 240, 0.3);
+}
+
+.repository_button:hover {
+    background-color: #8c5de6;
+    transform: scale(1.05);
+}
+
+/* Responsive Video Container */
+iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 340px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Make images/iframes responsive on small screens */
+@media (max-width: 600px) {
+    iframe {
+        height: 250px;
+    }
+    
+    .project-card {
+        padding: 20px;
+        margin: 20px 10px;
+    }
 }
 
 
