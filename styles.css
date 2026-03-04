@@ -243,6 +243,27 @@ iframe {
         padding: 20px;
         margin: 20px 10px;
     }
+
+    /* Navbar adjustments for mobile */
+    .navbar {
+        height: auto;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar-links {
+        margin-bottom: 5px;
+        gap: 10px;
+    }
+
+    .navbar-info {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    body {
+        padding-top: 100px; /* Increase space for taller navbar */
+    }
 }
 
 
