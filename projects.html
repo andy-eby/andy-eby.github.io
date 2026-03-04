@@ -10,33 +10,52 @@
 
     <body>
         <div class="navbar">
-            <a href="index.html" target="_self">
-                <img src="Images/home_icon.png" title="Home" alt="Home" width="30" height="30">
-            </a>
+            <div class="navbar-links">
+                <a href="index.html" target="_self">
+                    <img src="Images/home_icon.png" title="Home" alt="Home" width="30" height="30">
+                </a>
 
-            <a href="projects.html" target="_self">
-                <img src="Images/projects_icon.png" title="Projects" alt="Projects" width="30" height="30">   
-            </a>
+                <a href="projects.html" target="_self">
+                    <img src="Images/projects_icon.png" title="Projects" alt="Projects" width="30" height="30">   
+                </a>
 
-            <a href="Resume.pdf" target="_blank">
-                <img src="Images\resume_icon.png" title="Resume" alt="Resume" width="30" height="30">   
-            </a>
+                <a href="Resume.pdf" target="_blank">
+                    <img src="Images\resume_icon.png" title="Resume" alt="Resume" width="30" height="30">   
+                </a>
           
-            <a href="https://github.com/andy-eby" target="_blank">
-                <img src="Images/GitHub_Logo.png" title="GitHub" alt="GitHub" width="30" height="30">
-            </a>
-            <a href="https://www.linkedin.com/in/andrew-eby" target="_blank">
-                <img src="Images/LinkedIn_logo.png" title="LinkedIn" alt="LinkedIn" width="30" height="30">
-            </a>
+                <a href="https://github.com/andy-eby" target="_blank">
+                    <img src="Images/GitHub_Logo.png" title="GitHub" alt="GitHub" width="30" height="30">
+                </a>
+                <a href="https://www.linkedin.com/in/andrew-eby" target="_blank">
+                    <img src="Images/LinkedIn_logo.png" title="LinkedIn" alt="LinkedIn" width="30" height="30">
+                </a>
+            </div>
 
-            <p>
-                Andrew Eby | ebyandy1@hotmail.com
-            </p>
+            <div class="navbar-info">
+                <p>Andrew Eby | ebyandy1@hotmail.com</p>
+            </div>
         </div>
         
         <section id="projects" class="projects">
-            <section id="ko_stars">
-                <h1>Projects</h1>
+            <h1>Projects</h1>
+
+            <section id="chick_tracking" class="project-card">
+                <h4>Real-Time Baby Chick Tracking</h4>
+                <h6>Professor Wood's Building a Mind Lab</h6>
+                <h6>Collaborator: Joshua McGraw</h6>
+                <a href="Animal_Tracker_Recap.pdf" target="_blank">
+                    <button class="repository_button">View Project Report</button>
+                </a>
+                <ul>
+                    <li>Joined the research lab as an undergraduate research assistant, collaborating with graduate student Joshua McGraw to develop a computer vision pipeline for real-time baby chick tracking — contributing from data collection and labeling all the way through model training and evaluation.</li>
+                    <li>Researched and tested multiple architectures (CNNs, Transformers) across hundreds of experiments, ultimately training the HRNet-based model the lab adopted as its final solution.</li>
+                    <li>Built a two-component system — a background segmenter and keypoint predictor — capable of placing keypoints on individual chicks in a live camera feed, overcoming challenges like chick clustering and wall proximity.</li>
+                    <li>Learned to navigate the model search space systematically: interpreting training curves, diagnosing overfitting, and making informed decisions on hyperparameter tuning vs. architecture changes.</li>
+                    <li>Gained firsthand research experience beyond coursework — maintaining experiment logs, handling ambiguous problems, and learning that persistence and attention to detail matter as much as technical skill.</li>
+                </ul>
+            </section>
+            
+            <section id="ko_stars" class="project-card">
                 <h4>KO Stars</h4>
                 <h6>INFO-304 Spring 2025</h6>
                 <a href="https://andy-eby.itch.io/ko-stars" target="_blank">
@@ -50,8 +69,8 @@
                 </ul>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/LSjaG-iz7NA?si=GNgx4DMo3Sl2aN4F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </section>
 
-            <section id="nfl_trade_project">
-                <h4 style="margin-top: 50px;">An NFL Trade Outcome Prediction Model</h4>
+            <section id="nfl_trade_project" class="project-card">
+                <h4>An NFL Trade Outcome Prediction Model</h4>
                 <h6>CSCI-365 Fall 2024</h6>
                 <h6>Colleague: Chris Haleas</h6>
                 <a href="https://github.com/andy-eby/NFL-trade-outcome-predictor" target="_blank">
@@ -68,8 +87,8 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/WOEZEPdm62Y?si=qdN6moN1plTDl1S-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </section>
 
-            <section id="fashion_recommendation_system">
-                <h4 style="margin-top: 50px;">A Fashion Recommendation System</h4>
+            <section id="fashion_recommendation_system" class="project-card">
+                <h4>A Fashion Recommendation System</h4>
                 <h6>CSCI-351 Spring 2024</h6>
                 <h6>Colleagues: Chris Haleas, Sanmeet Singh, and Rehaan Rafi</h6>
                 <a href="https://github.com/andy-eby/Fashion-recommendation-system" target="_blank">
